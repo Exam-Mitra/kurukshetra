@@ -1,0 +1,42 @@
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .topbar {
+    grid-template-columns: 1fr auto 1fr;
+    padding: 10px 12px;
+  }
+  .brand { font-size: 1em; letter-spacing: 2px; }
+  .streak-pill { font-size: 0.75em; padding: 4px 8px; }
+  .topbar-center { gap: 8px; }
+  .exp-text { display: none; }
+  .rank-badge { font-size: 0.75em; padding: 4px 10px; }
+  .level-ring svg { width: 36px; height: 36px; }
+  .level-ring span { font-size: 0.75em; }
+  .icon-btn { width: 34px; height: 34px; font-size: 1em; }
+  .avatar-mini { width: 34px; height: 34px; font-size: 1.2em; }
+  .main-content { padding: 12px; }
+  .dash-greeting h1 { font-size: 1.4em; }
+  .subject-grid { grid-template-columns: 1fr; }
+  .compete-grid { grid-template-columns: 1fr; }
+  .cal-grid { grid-template-columns: repeat(10, 1fr); }
+  .warmap-mini { grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); }
+  .qplayer-header { flex-direction: column; align-items: stretch; }
+  .qplayer-info, .qplayer-stats { justify-content: space-between; }
+  .onboard-card { margin: 30px 16px; padding: 30px 20px; }
+  .loader-title { font-size: 1.8em; letter-spacing: 4px; }
+  .chapter-tabs { font-size: 0.85em; }
+  .tab-btn { padding: 8px 10px; }
+}
+
+@media (max-width: 480px) {
+  .topbar-left .brand { display: none; }
+  .cal-grid { grid-template-columns: repeat(7, 1fr); }
+  .nav-btn { font-size: 0.65em; }
+  .setting-row { flex-direction: column; align-items: stretch; gap: 8px; }
+  .q-actions button { min-width: 100%; }
+  .avatar-picker { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1200px) {
+  .app { max-width: 1200px; }
+  .subject-grid { grid-template-columns: repeat(3, 1fr); }
+}
