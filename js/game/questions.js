@@ -33,7 +33,32 @@ const Questions = {
       K.toast('❌ Chapter data not found');
       return;
     }
-    let allQ = chapterData.questions || [];
+
+    // 1. Get the static base questions
+
+let baseQ = (chapterData.questions || []).slice();
+
+
+
+// 2. Add PYQ questions from ALL 8 banks
+
+if (window.PYQ_PHYSICS && PYQ_PHYSICS[chapterId]) baseQ = baseQ.concat(PYQ_PHYSICS[chapterId]);
+if (window.PYQ_PHYSICS_FULL && PYQ_PHYSICS_FULL[chapterId]) baseQ = baseQ.concat(PYQ_PHYSICS_FULL[chapterId]);
+if (window.PYQ_PHYSICS_P5_P14 && PYQ_PHYSICS_P5_P14[chapterId]) baseQ = baseQ.concat(PYQ_PHYSICS_P5_P14[chapterId]);
+if (window.PYQ_PHYSICS_P9_P14 && PYQ_PHYSICS_P9_P14[chapterId]) baseQ = baseQ.concat(PYQ_PHYSICS_P9_P14[chapterId]);
+if (window.PYQ_CHEMISTRY && PYQ_CHEMISTRY[chapterId]) baseQ = baseQ.concat(PYQ_CHEMISTRY[chapterId]);
+if (window.PYQ_CHEMISTRY_REST && PYQ_CHEMISTRY_REST[chapterId]) baseQ = baseQ.concat(PYQ_CHEMISTRY_REST[chapterId]);
+if (window.PYQ_MATHS && PYQ_MATHS[chapterId]) baseQ = baseQ.concat(PYQ_MATHS[chapterId]);
+if (window.PYQ_MATHS_REST && PYQ_MATHS_REST[chapterId]) baseQ = baseQ.concat(PYQ_MATHS_REST[chapterId]);
+
+
+
+// 3. Add curated questions
+if (window.CURATED_BANK && CURATED_BANK[subject] && CURATED_BANK[subject][chapterId]) {
+  baseQ = baseQ.concat(CURATED_BANK[subject][chapterId]);
+}
+
+let allQ = baseQ;
 
     if (mode === 'dpp') {
       // DPP: full chapter, 90 seconds each, 5-10 questions
@@ -69,52 +94,11 @@ const Questions = {
   },
 
   _getChapterData(subject, chapterId) {
-    if (subject === 'physics') {
-      const base = PHYSICS_DATA[chapterId] || {};
-      // Merge from original PYQ_PHYSICS (p1/p2) + new full bank (p1-p8)
-      let merged = [...(base.questions || [])];
-
-      // Legacy PYQs (p1, p2)
-      if (window.PYQ_PHYSICS && PYQ_PHYSICS[chapterId]) {
-        merged = merged.concat(PYQ_PHYSICS[chapterId]);
-      }
-
-      // Full PYQ bank (p1 to p8) - 160 real-style JEE questions
-      if (window.PYQ_PHYSICS_FULL && PYQ_PHYSICS_FULL[chapterId]) {
-        merged = merged.concat(PYQ_PHYSICS_FULL[chapterId]);
-      }
-
-      return {
-        ...base,
-        questions: merged
-      };
-    }
-    if (subject === 'chemistry') {
-      const base = CHEMISTRY_DATA[chapterId] || {};
-      const pyqMap = { c1: 'c1', c2: 'c2', c4: 'c4' };
-      const pyqKey = pyqMap[chapterId];
-      if (pyqKey && window.PYQ_CHEMISTRY && PYQ_CHEMISTRY[pyqKey]) {
-        const pyqs = PYQ_CHEMISTRY[pyqKey] || [];
-        return {
-          ...base,
-          questions: [...(base.questions || []), ...pyqs]
-        };
-      }
-      return base;
-    }
-    if (subject === 'maths') {
-      const base = MATHS_DATA[chapterId] || {};
-      const pyqMap = { m1: 'm1', m3: 'm3', m5: 'm5' };
-      const pyqKey = pyqMap[chapterId];
-      if (pyqKey && window.PYQ_MATHS && PYQ_MATHS[pyqKey]) {
-        const pyqs = PYQ_MATHS[pyqKey] || [];
-        return {
-          ...base,
-          questions: [...(base.questions || []), ...pyqs]
-        };
-      }
-      return base;
-    }
+    // Return raw chapter data only.
+    // All PYQ banks + curated are merged in startSession (see below).
+    if (subject === 'physics') return PHYSICS_DATA[chapterId] || {};
+    if (subject === 'chemistry') return CHEMISTRY_DATA[chapterId] || {};
+    if (subject === 'maths') return MATHS_DATA[chapterId] || {};
     return null;
   },
 
