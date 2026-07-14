@@ -1,136 +1,65 @@
-# ⚔️ KURUKSHETRA — JEE 2028 Sigma Edition
+# Kurukshetra — JEE 2028 Study Hub (V3)
 
-A complete gamified JEE prep app for Class 11 (Physics, Chemistry, Maths).
+**Pure glassmorphism study hub for JEE 2028. 40 chapters × 8 resource tabs. No game mechanics — just focused study.**
 
-## 🎮 Features (30+)
-- ✅ Avatar system (8 warrior skins, unlock by level)
-- ✅ EXP & Level system (with combo multipliers)
-- ✅ 8 Ranks: Bronze → Silver → Gold → Platinum → Diamond → Master → Grandmaster → Legend
-- ✅ Daily streak with 1 day grace per week
-- ✅ Daily login bonus + loot boxes
-- ✅ 3 random daily missions + completion rewards
-- ✅ Adaptive timer (gets faster as you level up)
-- ✅ All 4 question types: MCQ single, MCQ multi, Numeric, Subjective
-- ✅ Mixed difficulty sessions: Basic + Medium + Advanced + Boss
-- ✅ Tricks inventory — locked until unlocked through questions
-- ✅ Cheat sheets for every chapter
-- ✅ Weakness Vault — auto-tags weak topics
-- ✅ Battle Calendar — 30-day streak visualization
-- ✅ War Map — visual chapter progress (linear path)
-- ✅ Competition Arena: Solo PB, Vs AI Bot, Vs Friend (link)
-- ✅ Certificates (Chapter, Rank, Subject)
-- ✅ Code-only animations (CSS + Canvas confetti)
-- ✅ Web Audio API sounds (no asset files needed)
-- ✅ Daily 8:15 PM reminder + streak warnings
-- ✅ School Mode (Sunday — lighter tasks, revision only)
-- ✅ LocalStorage save + Export/Import JSON
-- ✅ Dark/Light theme toggle
-- ✅ Responsive (mobile, tablet, desktop)
-- ✅ Full Class 11 syllabus: 14 Physics + 13 Chemistry + 13 Maths chapters
-- ✅ 5+ questions per chapter with JEE-pattern solutions
-- ✅ 3+ killer tricks per chapter (the "trick that works on all questions of that type")
-- ✅ Honest teaching on every wrong answer
+## What's inside
 
-## 📂 File Structure
-```
-Kurukshetra/
-├── index.html
-├── css/
-│   ├── style.css         (main theme + layout)
-│   ├── game.css          (animations, certificates, level up)
-│   └── responsive.css    (mobile breakpoints)
-├── js/
-│   ├── app.js            (main controller)
-│   ├── data/
-│   │   ├── syllabus.js   (Class 11 full syllabus)
-│   │   ├── physics.js    (Physics: 14 chapters, questions, tricks, cheatsheets)
-│   │   ├── chemistry.js  (Chemistry: 13 chapters)
-│   │   └── maths.js      (Maths: 13 chapters)
-│   ├── game/
-│   │   ├── exp.js        (EXP, level, combo)
-│   │   ├── streak.js     (1-day grace streak)
-│   │   ├── timer.js      (adaptive timer)
-│   │   ├── tasks.js      (HW, DPP, lectures)
-│   │   ├── questions.js  (question player — 4 types)
-│   │   ├── tricks.js     (locked tricks inventory)
-│   │   ├── weak.js       (weakness vault)
-│   │   ├── missions.js   (3 random daily missions)
-│   │   ├── school.js     (Sunday school mode)
-│   │   ├── competition.js(solo, vs AI bot, vs friend link)
-│   │   ├── avatar.js     (8 warrior skins)
-│   │   └── certificates.js (downloadable certificates)
-│   ├── storage/
-│   │   └── save.js       (localStorage + import/export)
-│   ├── ui/
-│   │   ├── dashboard.js  (top bar, subject tiles, calendar)
-│   │   ├── war-map.js    (chapter progress map)
-│   │   ├── calendar.js   (30-day streak grid)
-│   │   ├── sounds.js     (Web Audio API tones)
-│   │   ├── animations.js (CSS + Canvas confetti)
-│   │   └── notifications.js (8:15 PM daily reminder)
-│   └── utils/
-│       └── helpers.js    (K object — date, DOM, math, ranks)
-└── README.md
-```
+| Subject | Chapters |
+|---------|----------|
+| Physics | 14 |
+| Chemistry | 13 |
+| Maths | 13 |
 
-## 🚀 How to Run
+For every chapter you get:
 
-### Option 1: Just open `index.html`
-- Double-click `index.html` — it works directly in any modern browser.
-- Data saves in browser localStorage.
+1. **📖 Notes** — JEE-level study notes (full for Units & Measurements and Motion in a Straight Line; framework + formulas for all others)
+2. **🧠 Mind Map** — SVG radial concept map
+3. **📋 Cheat Sheet** — formulas with click-to-copy
+4. **🎯 Summary** — 15-point revision list
+5. **📚 PYQs** — self-contained practice player (mixed / basic / medium / advanced / DPP)
+6. **🎥 Best Video** — curated YouTube lesson with modal player
+7. **📑 Topper Notes** — links to topper resources
+8. **🔗 Resources** — NCERT PDF, PW material, Examside PYQs, LearnCBSE solutions
 
-### Option 2: Host free (recommended for cross-device)
-1. **GitHub Pages** (free):
-   - Push the `Kurukshetra/` folder to a GitHub repo
-   - Settings → Pages → select main branch → Save
-   - Access at `https://yourname.github.io/repo-name/`
-2. **Netlify Drop** (zero signup):
-   - Visit https://app.netlify.com/drop
-   - Drag the `Kurukshetra/` folder
-   - Get instant URL
-3. **Vercel** (free):
-   - `npx vercel` in the folder
-   - Get URL
+## Features
 
-### Option 3: Run locally with a simple server
+- Glassmorphism UI (light / dark themes)
+- Global search across chapters, formulas, and videos
+- Chapter bookmarks + progress tracking (localStorage `kurukshetra_v3`)
+- Export / import progress JSON
+- PWA manifest (installable)
+- Fully static — open `index.html` or serve via GitHub Pages
+
+## Run locally
+
 ```bash
-cd Kurukshetra
-python3 -m http.server 8000
-# Open http://localhost:8000
+# any static server, e.g.
+python3 -m http.server 8080
+# then open http://localhost:8080
 ```
 
-## 📚 Content Scope
+## Project layout
 
-**Class 11 — Full NTA JEE 2028 syllabus** with:
-- Each chapter: 4-6 questions (Basic/Medium/Advanced/Boss)
-- Each chapter: 3-5 "killer tricks" (locked until you solve a question of that type)
-- Each chapter: 8-12 cheat sheet formulas
-- All questions follow JEE Mains + Advanced pattern
-- All solutions show the trick that "works on all questions of that type"
-- AI-generated (the app is your teacher)
+```
+index.html
+manifest.json
+css/study.css
+js/
+  app.js
+  data/          # syllabus, chapter Q banks, PYQs, study-content, videos, resources
+  storage/save.js
+  utils/helpers.js
+  ui/            # notes, mindmap, cheatsheet, summary, pyqs, video, resources, ...
+```
 
-## 🎯 Daily Workflow (recommended)
+## Storage
 
-1. **8:15 PM reminder** fires — "Time to fight, warrior"
-2. Open app, complete **3 daily missions** (+50-100 EXP)
-3. Go to **Today's subject** (Mon/Thu Physics, Tue/Fri Chemistry, Wed/Sat Maths)
-4. **War Map** shows which chapter is unlocked — tap it
-5. **Learn tab**: read intro, check cheat sheet
-6. **Practice tab**: Mixed session (Basic + Medium + Advanced + Boss)
-7. Get 70%+ accuracy to unlock next chapter
-8. Wrong answers: app shows solution + unlocks the trick in your **inventory**
-9. **Tricks** tab in bottom nav: review your unlocked tricks
+Progress is stored under `localStorage` key **`kurukshetra_v3`**:
 
-## 🛠️ Tech Stack
-- Pure HTML + CSS + Vanilla JS (zero dependencies)
-- localStorage for save
-- Web Audio API for sounds
-- CSS animations + Canvas for confetti
-- No frameworks, no build step
+- `progress[subject][chapterId]` — notes/mindmap/cheatsheet/summary/video flags, PYQ counts, lastVisited
+- `bookmarks` / `warrior.bookmarkedChapters`
+- `settings.theme`, `settings.fontSize`
 
-## 💰 Cost
-- ₹0 — fully self-contained
+## License
 
----
-
-Built for JEE 2028. Forge your legend. ⚔️🔥
+Educational use for JEE aspirants.

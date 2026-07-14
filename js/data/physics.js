@@ -965,3 +965,4 @@ const PHYSICS_DATA_2 = {
 if (typeof PHYSICS_DATA !== 'undefined') {
   Object.assign(PHYSICS_DATA, PHYSICS_DATA_2);
 }
+window.PHYSICS_DATA = PHYSICS_DATA;

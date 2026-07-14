@@ -615,3 +615,4 @@ const CHEMISTRY_DATA = {
     ]
   }
 };
+window.CHEMISTRY_DATA = CHEMISTRY_DATA;

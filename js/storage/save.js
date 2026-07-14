@@ -1,58 +1,42 @@
 /* ============================================
-   KURUKSHETRA — Storage System
-   localStorage + export/import
+   KURUKSHETRA V3.1 — Storage (features-aware)
    ============================================ */
 
 const Storage = {
-  KEY: 'kurukshetra_data_v1',
+  KEY: 'kurukshetra_v3',
 
-  // Default state
   defaultState() {
     return {
-      // User
-      warrior: {
-        name: 'Warrior',
-        year: 2028,
-        skin: 'arjuna',
-        level: 1,
-        exp: 0,
-        totalExp: 0
-      },
-      // Streak
-      streak: {
-        current: 0,
-        best: 0,
-        lastActive: null,
-        graceUsed: 0,         // grace days used this week
-        graceWeekStart: null
-      },
-      // Calendar: { 'YYYY-MM-DD': { missionsDone, questionsAttempted, correct, exp, isSchool } }
-      calendar: {},
-      // Subject progress: { physics: { chapterId: { done, questionsCorrect, totalQuestions, tricksUnlocked } } }
-      progress: {
-        physics: {},
-        chemistry: {},
-        maths: {}
-      },
-      // Tricks inventory: { trickId: { subject, chapter, name, body, when, unlockedAt } }
-      tricks: {},
-      // Weak topics: [ { subject, chapter, mistakeCount, lastWrong } ]
-      weak: [],
-      // Missions: { 'YYYY-MM-DD': [ {id, text, reward, done} ] }
-      missions: {},
-      // Settings
+      warrior: { name: 'Scholar', bookmarkedChapters: [] },
+      progress: { physics: {}, chemistry: {}, maths: {} },
+      // progress[s][ch] = {
+      //   notesViewed, mindMapViewed, cheatSheetViewed, summaryViewed, videoWatched,
+      //   pyqsAttempted, pyqsCorrect, lastVisited, lastTab, lastVisitedAt,
+      //   difficultyRating (1-5), confidence (0-5), notesHtml flag via notes{}
+      //   studySeconds: { notes:0, ... total:0 }
+      // }
+      questionHistory: {},
+      // questionHistory[qid] = { subject, chapterId, seen, correct, wrong, lastSeen, nextReview, interval, ease, bookmarked }
+      bookmarks: [],
+      formulaBookmarks: [], // formula ids
+      questionBookmarks: [], // question ids
+      notes: {}, // `${subject}:${chapterId}` -> text
+      mistakes: [], // { id, subject, chapterId, q, options, picked, answer, solution, at }
+      srs: { queue: [] },
+      studyLog: {}, // YYYY-MM-DD -> { seconds, subjects: {physics: s}, opens: n }
+      studyStreak: { current: 0, best: 0, lastDay: null },
+      searchHistory: [],
+      pdfLastViewed: {}, // url -> ISO date
+      activePlan: null, // { id, started, completed: [] }
+      lastResume: null, // { subject, chapterId, tab, at }
       settings: {
-        reminderTime: '20:15',
-        soundVolume: 60,
-        theme: 'dark',
-        gracePerWeek: 1
+        theme: 'dark', // dark | light | auto | sepia
+        fontSize: 'medium',
+        accent: '#6366f1',
+        lastBackupReminder: null
       },
-      // Achievements
-      achievements: {},
-      // Certificates
-      certificates: [],
-      // AI Bot scores (for vs AI mode)
-      botScores: []
+      timeOfDayStats: {}, // hour -> { attempts, correct }
+      importVersion: 3
     };
   },
 
@@ -60,11 +44,8 @@ const Storage = {
     try {
       const raw = localStorage.getItem(this.KEY);
       if (!raw) return this.defaultState();
-      const data = JSON.parse(raw);
-      // Merge with default to handle new fields
-      return this._mergeDeep(this.defaultState(), data);
+      return this._mergeDeep(this.defaultState(), JSON.parse(raw));
     } catch (e) {
-      console.error('Load failed', e);
       return this.defaultState();
     }
   },
@@ -74,7 +55,6 @@ const Storage = {
       localStorage.setItem(this.KEY, JSON.stringify(state));
       return true;
     } catch (e) {
-      console.error('Save failed', e);
       return false;
     }
   },
@@ -84,47 +64,68 @@ const Storage = {
     return this.defaultState();
   },
 
-  export(state) {
-    const dataStr = JSON.stringify(state, null, 2);
-    const blob = new Blob([dataStr], { type: 'application/json' });
+  export(state, filename) {
+    const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `kurukshetra_backup_${K.todayKey()}.json`;
+    a.download = filename || `kurukshetra_backup_${K.todayKey()}.json`;
     a.click();
     URL.revokeObjectURL(url);
     K.toast('📤 Data exported!');
   },
 
-  import(file, callback) {
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const data = JSON.parse(e.target.result);
-        if (data.warrior && data.progress) {
-          this.save(data);
-          K.toast('📥 Data imported!');
-          callback(data);
-        } else {
-          K.toast('❌ Invalid file');
-        }
-      } catch (err) {
-        K.toast('❌ Failed to parse file');
-      }
+  exportBookmarks(state) {
+    const data = {
+      type: 'kurukshetra_bookmarks',
+      version: 1,
+      bookmarks: state.bookmarks || [],
+      formulaBookmarks: state.formulaBookmarks || [],
+      questionBookmarks: state.questionBookmarks || [],
+      warrior: { bookmarkedChapters: state.warrior?.bookmarkedChapters || [] }
     };
-    reader.readAsText(file);
+    this.export(data, `kurukshetra_bookmarks_${K.todayKey()}.json`);
   },
 
-  _mergeDeep(defaults, data) {
-    if (typeof defaults !== 'object' || defaults === null || Array.isArray(defaults)) return data;
-    const out = { ...defaults };
-    for (const key in data) {
-      if (typeof data[key] === 'object' && data[key] !== null && !Array.isArray(data[key]) && typeof defaults[key] === 'object') {
-        out[key] = this._mergeDeep(defaults[key], data[key]);
-      } else {
-        out[key] = data[key];
+  import(file, cb) {
+    const r = new FileReader();
+    r.onload = (e) => {
+      try {
+        const d = JSON.parse(e.target.result);
+        if (d.type === 'kurukshetra_bookmarks') {
+          const st = this.load();
+          st.bookmarks = d.bookmarks || [];
+          st.formulaBookmarks = d.formulaBookmarks || [];
+          st.questionBookmarks = d.questionBookmarks || [];
+          st.warrior = st.warrior || {};
+          st.warrior.bookmarkedChapters = d.warrior?.bookmarkedChapters || [];
+          this.save(st);
+          cb(st);
+          K.toast('📥 Bookmarks imported!');
+          return;
+        }
+        if (d.progress) {
+          this.save(d);
+          cb(d);
+          K.toast('📥 Data imported!');
+        } else K.toast('❌ Invalid file');
+      } catch (err) {
+        K.toast('❌ Failed to parse');
       }
+    };
+    r.readAsText(file);
+  },
+
+  _mergeDeep(d, data) {
+    if (typeof d !== 'object' || d === null || Array.isArray(d)) return data;
+    const out = { ...d };
+    for (const k in data) {
+      out[k] = (typeof data[k] === 'object' && data[k] !== null && !Array.isArray(data[k]) && typeof d[k] === 'object')
+        ? this._mergeDeep(d[k], data[k])
+        : data[k];
     }
     return out;
   }
 };
+
+window.Storage = Storage;
