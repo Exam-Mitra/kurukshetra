@@ -178,13 +178,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Units & Measurements",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Units & Measurements",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -335,13 +335,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — 1D Motion",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — 1D Motion",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -470,13 +470,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Projectile & Vectors",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Projectile & Vectors",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -619,13 +619,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Newton Laws",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Newton Laws",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -756,13 +756,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Work-Energy",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Work-Energy",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -883,13 +883,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Rotation",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Rotation",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1014,13 +1014,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Gravitation",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Gravitation",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1145,13 +1145,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Elasticity",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Elasticity",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1286,13 +1286,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Fluids",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Fluids",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1421,13 +1421,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Thermal",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Thermal",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1552,13 +1552,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Thermo",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Thermo",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1675,13 +1675,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — KTG",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — KTG",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1802,13 +1802,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — SHM",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — SHM",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -1933,13 +1933,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Waves",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Waves",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2062,13 +2062,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Mole Concept",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Mole Concept",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2193,13 +2193,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Atomic Structure",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Atomic Structure",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2320,13 +2320,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Periodicity",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Periodicity",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2447,13 +2447,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Bonding",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Bonding",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2570,13 +2570,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Thermo Chem",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Thermo Chem",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2701,13 +2701,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Equilibrium",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Equilibrium",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2828,13 +2828,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Redox",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Redox",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -2959,13 +2959,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — GOC",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — GOC",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3082,13 +3082,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Hydrocarbons",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Hydrocarbons",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3209,13 +3209,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — s-Block",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — s-Block",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3340,13 +3340,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — p-Block",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — p-Block",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3463,13 +3463,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Hydrogen",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Hydrogen",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3586,13 +3586,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Environment",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Environment",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3715,13 +3715,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Sets",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Sets",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3838,13 +3838,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Relations",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Relations",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -3961,13 +3961,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Trigonometry",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Trigonometry",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4092,13 +4092,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — PMI",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — PMI",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4215,13 +4215,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Complex",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Complex",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4338,13 +4338,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Inequalities",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Inequalities",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4461,13 +4461,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — PnC",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — PnC",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4584,13 +4584,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Binomial",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Binomial",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4711,13 +4711,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Sequences",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Sequences",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4834,13 +4834,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Straight Lines",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Straight Lines",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -4957,13 +4957,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Conics",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Conics",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -5080,13 +5080,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Calculus Intro",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Calculus Intro",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {
@@ -5211,13 +5211,13 @@ const STUDY_CONTENT = {
       ],
       "topperNotes": [
         {
-          "name": "PW Topper Notes — Stats & Prob",
-          "url": "https://www.pw.live/toppers-notes",
+          "name": "Vedantu Topper Notes — Stats & Prob",
+          "url": "https://www.vedantu.com/jee-toppers-notes",
           "icon": "🏆"
         },
         {
-          "name": "Allen Formula Card",
-          "url": "https://www.pw.live/study-material",
+          "name": "eSaral Formula & Revision Notes",
+          "url": "https://www.esaral.com/jee/jee-main-revision-notes/",
           "icon": "📋"
         },
         {

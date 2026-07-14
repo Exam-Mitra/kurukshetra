@@ -81,6 +81,7 @@
       <section id="view-rapid" class="view hidden"></section>
       <section id="view-analytics" class="view hidden"></section>
       <section id="view-plans" class="view hidden"></section>
+      <section id="view-resource-health" class="view hidden"></section>
     </main>
   </div>
 
@@ -94,9 +95,9 @@
 
   <div id="toast" class="hidden"></div>
 
-  <div id="fileModal" class="modal hidden"><div class="modal-box"><div class="modal-head"><h3 id="fileModalTitle">Resource</h3><a id="fileModalLink" href="#" target="_blank" class="btn btn-ghost">Open in new tab ↗</a><button class="modal-close" id="fileModalClose">✕</button></div><div class="modal-body"><iframe id="fileModalFrame" src="about:blank" allowfullscreen></iframe></div></div></div>
+  <div id="fileModal" class="modal hidden"><div class="modal-box"><div class="modal-head"><h3 id="fileModalTitle">Resource</h3><a id="fileModalLink" href="#" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none; padding: 8px 18px;">Open in new tab ↗</a><button class="modal-close" id="fileModalClose">✕</button></div><div class="modal-body"><div id="fileModalNotice" class="iframe-notice">💡 If the preview is blank, the site doesn't allow embedding. <a id="fileModalNoticeLink" href="#" target="_blank" rel="noopener">Open directly →</a></div><iframe id="fileModalFrame" src="about:blank" loading="lazy" allowfullscreen></iframe></div></div></div>
 
-  <div id="videoModal" class="modal hidden"><div class="modal-box"><div class="modal-head"><h3 id="videoModalTitle">Video</h3><button class="modal-close" id="videoModalClose">✕</button></div><div class="modal-body video-modal-body"><div id="videoModalMeta" class="video-meta"></div><iframe id="videoModalFrame" src="about:blank" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p id="videoModalDesc"></p></div></div></div>
+  <div id="videoModal" class="modal hidden"><div class="modal-box"><div class="modal-head"><h3 id="videoModalTitle">Video</h3><button class="modal-close" id="videoModalClose">✕</button></div><div class="modal-body video-modal-body"><div id="videoModalMeta" class="video-meta"></div><iframe id="videoModalFrame" src="about:blank" loading="lazy" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p id="videoModalDesc"></p></div></div></div>
 
   <script src="js/data/syllabus.js"></script>
   <script src="js/data/physics.js"></script>
@@ -110,6 +111,7 @@
   <script src="js/data/study-content.js"></script>
   <script src="js/data/best-videos.js"></script>
   <script src="js/data/best-resources.js"></script>
+  <script src="js/data/verified-urls.js"></script>
   <script src="js/data/formula-library.js"></script>
   <script src="js/data/related-chapters.js"></script>
   <script src="js/data/ncert-pages.js"></script>

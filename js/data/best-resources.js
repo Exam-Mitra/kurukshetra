@@ -1,18 +1,19 @@
-/* KURUKSHETRA V3 — Best Resources per chapter */
+/* KURUKSHETRA V3.1 — Best Resources per chapter
+   Broken NCERT/PW/LearnCBSE links replaced with verified public mirrors. */
 const BEST_RESOURCES = {
   "physics": {
     "p1": [
       {
-        "name": "NCERT Units & Measurements",
-        "url": "https://ncert.nic.in/textbook/pdf/phys1cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Units & Measurements",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-1-units-and-measurement",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Units & Measurements",
@@ -21,24 +22,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 1",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-1-units-and-measurements/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p2": [
       {
-        "name": "NCERT Motion in Straight Line",
-        "url": "https://ncert.nic.in/textbook/pdf/phys2cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Motion in Straight Line",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-2-motion-in-a-straight-line",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Motion in Straight Line",
@@ -47,24 +48,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 2",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-2-motion-in-straight-line/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p3": [
       {
-        "name": "NCERT Motion in a Plane",
-        "url": "https://ncert.nic.in/textbook/pdf/phys3cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Motion in a Plane",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-3-motion-in-a-plane",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Motion in a Plane",
@@ -73,24 +74,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 3",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-3-motion-in-a-plane/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p4": [
       {
-        "name": "NCERT Laws of Motion",
-        "url": "https://ncert.nic.in/textbook/pdf/phys4cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Laws of Motion",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-4-law-of-motion",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Laws of Motion",
@@ -99,24 +100,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 4",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-4-laws-of-motion/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p5": [
       {
-        "name": "NCERT Work, Energy & Power",
-        "url": "https://ncert.nic.in/textbook/pdf/phys5cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Work, Energy & Power",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-5-work-energy-and-power",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Work, Energy & Power",
@@ -125,24 +126,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 5",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-5-work-energy-and-power/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p6": [
       {
-        "name": "NCERT System of Particles & Rotational Motion",
-        "url": "https://ncert.nic.in/textbook/pdf/phys6cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — System of Particles & Rotational Motion",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-6-systems-of-particles-and-rotational-motion",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — System of Particles & Rotational Motion",
@@ -151,24 +152,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 6",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-6-system-of-particles-and-rotational-motion/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p7": [
       {
-        "name": "NCERT Gravitation",
-        "url": "https://ncert.nic.in/textbook/pdf/phys7cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Gravitation",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-7-gravitation",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Gravitation",
@@ -177,24 +178,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 7",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-7-gravitation/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p8": [
       {
-        "name": "NCERT Mechanical Properties of Solids",
-        "url": "https://ncert.nic.in/textbook/pdf/phys8cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Mechanical Properties of Solids",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-8-mechanical-properties-of-solids",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Mechanical Properties of Solids",
@@ -203,24 +204,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 8",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-8-mechanical-properties-of-solids/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p9": [
       {
-        "name": "NCERT Mechanical Properties of Fluids",
-        "url": "https://ncert.nic.in/textbook/pdf/phys9cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Mechanical Properties of Fluids",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-9-mechanical-properties-of-fluids",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Mechanical Properties of Fluids",
@@ -229,24 +230,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 9",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-9-mechanical-properties-of-fluids/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p10": [
       {
-        "name": "NCERT Thermal Properties of Matter",
-        "url": "https://ncert.nic.in/textbook/pdf/phys10cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Thermal Properties of Matter",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-10-thermal-properties-of-matter",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Thermal Properties of Matter",
@@ -255,24 +256,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 10",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-10-thermal-properties-of-matter/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p11": [
       {
-        "name": "NCERT Thermodynamics",
-        "url": "https://ncert.nic.in/textbook/pdf/phys11cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Thermodynamics",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-11-thermodynamics",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Thermodynamics",
@@ -281,24 +282,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 11",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-11-thermodynamics/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p12": [
       {
-        "name": "NCERT Kinetic Theory of Gases",
-        "url": "https://ncert.nic.in/textbook/pdf/phys12cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Kinetic Theory of Gases",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-12-kinetic-theory",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Kinetic Theory of Gases",
@@ -307,24 +308,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 12",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-12-kinetic-theory-of-gases/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p13": [
       {
-        "name": "NCERT Oscillations",
-        "url": "https://ncert.nic.in/textbook/pdf/phys13cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Oscillations",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-13-oscillations",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Oscillations",
@@ -333,24 +334,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 13",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-13-oscillations/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "p14": [
       {
-        "name": "NCERT Waves",
-        "url": "https://ncert.nic.in/textbook/pdf/phys14cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Waves",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-physics-chapter-14-waves",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Physics Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Physics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Waves",
@@ -359,26 +360,26 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 14",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-physics-chapter-14-waves/",
+        "name": "eSaral JEE Physics Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-physics-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ]
   },
   "chemistry": {
     "c1": [
       {
-        "name": "NCERT Some Basic Concepts of Chemistry",
-        "url": "https://ncert.nic.in/textbook/pdf/chem1cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Some Basic Concepts of Chemistry",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-1-some-basic-concepts-of-chemistry",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Some Basic Concepts of Chemistry",
@@ -387,24 +388,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 1",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-1-some-basic-concepts-of-chemistry/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c2": [
       {
-        "name": "NCERT Structure of Atom",
-        "url": "https://ncert.nic.in/textbook/pdf/chem2cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Structure of Atom",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-2-structure-of-atom",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Structure of Atom",
@@ -413,24 +414,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 2",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-2-structure-of-atom/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c3": [
       {
-        "name": "NCERT Classification of Elements & Periodicity",
-        "url": "https://ncert.nic.in/textbook/pdf/chem3cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Classification of Elements & Periodicity",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-3-classification-of-elements-and-periodicity-in-properties",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Classification of Elements & Periodicity",
@@ -439,24 +440,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 3",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-3-classification-of-elements-and-periodicity/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c4": [
       {
-        "name": "NCERT Chemical Bonding & Molecular Structure",
-        "url": "https://ncert.nic.in/textbook/pdf/chem4cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Chemical Bonding & Molecular Structure",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-4-chemical-bonding-and-molecular-structure",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Chemical Bonding & Molecular Structure",
@@ -465,24 +466,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 4",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-4-chemical-bonding-and-molecular-structure/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c5": [
       {
-        "name": "NCERT Thermodynamics (Chemistry)",
-        "url": "https://ncert.nic.in/textbook/pdf/chem5cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Thermodynamics (Chemistry)",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-5-thermodynamics",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Thermodynamics (Chemistry)",
@@ -491,24 +492,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 5",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-5-thermodynamics-chemistry/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c6": [
       {
-        "name": "NCERT Equilibrium",
-        "url": "https://ncert.nic.in/textbook/pdf/chem6cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Equilibrium",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-6-equilibrium",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Equilibrium",
@@ -517,24 +518,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 6",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-6-equilibrium/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c7": [
       {
-        "name": "NCERT Redox Reactions",
-        "url": "https://ncert.nic.in/textbook/pdf/chem7cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Redox Reactions",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-7-redox-reactions",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Redox Reactions",
@@ -543,24 +544,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 7",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-7-redox-reactions/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c8": [
       {
-        "name": "NCERT Organic Chemistry — Basic Principles",
-        "url": "https://ncert.nic.in/textbook/pdf/chem8cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Organic Chemistry — Basic Principles",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-8-organic-chemistry-some-basic-principles-and-techniques",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Organic Chemistry — Basic Principles",
@@ -569,24 +570,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 8",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-8-organic-chemistry---basic-principles/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c9": [
       {
-        "name": "NCERT Hydrocarbons",
-        "url": "https://ncert.nic.in/textbook/pdf/chem9cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Hydrocarbons",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-9-hydrocarbons",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Hydrocarbons",
@@ -595,24 +596,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 9",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-9-hydrocarbons/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c10": [
       {
-        "name": "NCERT s-Block Elements",
-        "url": "https://ncert.nic.in/textbook/pdf/chem10cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — s-Block Elements",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-10-in-hindi",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — s-Block Elements",
@@ -621,24 +622,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 10",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-10-s-block-elements/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c11": [
       {
-        "name": "NCERT p-Block Elements (Group 13 & 14)",
-        "url": "https://ncert.nic.in/textbook/pdf/chem11cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — p-Block Elements (Group 13 & 14)",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-11-in-hindi",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — p-Block Elements (Group 13 & 14)",
@@ -647,24 +648,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 11",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-11-p-block-elements-group-13-and-14/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c12": [
       {
-        "name": "NCERT Hydrogen",
-        "url": "https://ncert.nic.in/textbook/pdf/chem12cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Hydrogen",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-9-in-hindi",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Hydrogen",
@@ -673,24 +674,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 12",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-12-hydrogen/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "c13": [
       {
-        "name": "NCERT Environmental Chemistry",
-        "url": "https://ncert.nic.in/textbook/pdf/chem13cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Environmental Chemistry",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-chemistry-chapter-14-in-hindi",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Chemistry Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Chemistry%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Environmental Chemistry",
@@ -699,26 +700,26 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 13",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-chemistry-chapter-13-environmental-chemistry/",
+        "name": "eSaral JEE Chemistry Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-chemistry-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ]
   },
   "maths": {
     "m1": [
       {
-        "name": "NCERT Sets",
-        "url": "https://ncert.nic.in/textbook/pdf/memh1cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Sets",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-1-sets",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Sets",
@@ -727,24 +728,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 1",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-1-sets/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m2": [
       {
-        "name": "NCERT Relations & Functions",
-        "url": "https://ncert.nic.in/textbook/pdf/memh2cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Relations & Functions",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-2-relations-and-functions",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Relations & Functions",
@@ -753,24 +754,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 2",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-2-relations-and-functions/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m3": [
       {
-        "name": "NCERT Trigonometric Functions",
-        "url": "https://ncert.nic.in/textbook/pdf/memh3cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Trigonometric Functions",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-3-trigonometric-functions",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Trigonometric Functions",
@@ -779,24 +780,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 3",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-3-trigonometric-functions/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m4": [
       {
-        "name": "NCERT Principle of Mathematical Induction",
-        "url": "https://ncert.nic.in/textbook/pdf/memh4cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Principle of Mathematical Induction",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-4-in-hindi",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Principle of Mathematical Induction",
@@ -805,24 +806,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 4",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-4-principle-of-mathematical-induction/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m5": [
       {
-        "name": "NCERT Complex Numbers & Quadratic Equations",
-        "url": "https://ncert.nic.in/textbook/pdf/memh5cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Complex Numbers & Quadratic Equations",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-4-complex-numbers-and-quadratic-equations",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Complex Numbers & Quadratic Equations",
@@ -831,24 +832,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 5",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-5-complex-numbers-and-quadratic-equations/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m6": [
       {
-        "name": "NCERT Linear Inequalities",
-        "url": "https://ncert.nic.in/textbook/pdf/memh6cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Linear Inequalities",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-5-linear-inequalities",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Linear Inequalities",
@@ -857,24 +858,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 6",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-6-linear-inequalities/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m7": [
       {
-        "name": "NCERT Permutations & Combinations",
-        "url": "https://ncert.nic.in/textbook/pdf/memh7cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Permutations & Combinations",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-6-permutations-and-combinations",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Permutations & Combinations",
@@ -883,24 +884,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 7",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-7-permutations-and-combinations/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m8": [
       {
-        "name": "NCERT Binomial Theorem",
-        "url": "https://ncert.nic.in/textbook/pdf/memh8cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Binomial Theorem",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-7-binomial-theorem",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Binomial Theorem",
@@ -909,24 +910,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 8",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-8-binomial-theorem/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m9": [
       {
-        "name": "NCERT Sequences & Series",
-        "url": "https://ncert.nic.in/textbook/pdf/memh9cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Sequences & Series",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-8-sequences-and-series",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Sequences & Series",
@@ -935,24 +936,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 9",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-9-sequences-and-series/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m10": [
       {
-        "name": "NCERT Straight Lines",
-        "url": "https://ncert.nic.in/textbook/pdf/memh10cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Straight Lines",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-9-straight-lines",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Straight Lines",
@@ -961,24 +962,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 10",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-10-straight-lines/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m11": [
       {
-        "name": "NCERT Conic Sections",
-        "url": "https://ncert.nic.in/textbook/pdf/memh11cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Conic Sections",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-10-conic-sections",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Conic Sections",
@@ -987,24 +988,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 11",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-11-conic-sections/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m12": [
       {
-        "name": "NCERT Limits & Derivatives",
-        "url": "https://ncert.nic.in/textbook/pdf/memh12cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Limits & Derivatives",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-12-limits-and-derivatives",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Limits & Derivatives",
@@ -1013,24 +1014,24 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 12",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-12-limits-and-derivatives/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ],
     "m13": [
       {
-        "name": "NCERT Statistics & Probability",
-        "url": "https://ncert.nic.in/textbook/pdf/memh13cc.pdf",
-        "type": "pdf",
+        "name": "Vedantu NCERT Solutions — Statistics & Probability",
+        "url": "https://www.vedantu.com/ncert-solutions/ncert-solutions-class-11-maths-chapter-13-statistics",
+        "type": "web",
         "icon": "📘"
       },
       {
-        "name": "PW Study Material",
-        "url": "https://www.pw.live/study-material",
+        "name": "NCERT Class 11 Maths Book — Archive.org",
+        "url": "https://archive.org/search?query=NCERT%20Class%2011%20Mathematics%20textbook",
         "type": "web",
-        "icon": "📖"
+        "icon": "🏛️"
       },
       {
         "name": "JEE PYQs — Statistics & Probability",
@@ -1039,10 +1040,10 @@ const BEST_RESOURCES = {
         "icon": "📝"
       },
       {
-        "name": "NCERT Solutions Ch 13",
-        "url": "https://www.learncbse.in/ncert-solutions-class-11-maths-chapter-13-statistics-and-probability/",
+        "name": "eSaral JEE Maths Revision Notes",
+        "url": "https://www.esaral.com/jee/jee-main-maths-revision-notes/",
         "type": "web",
-        "icon": "🔗"
+        "icon": "📖"
       }
     ]
   }
