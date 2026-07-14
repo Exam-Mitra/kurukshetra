@@ -60,7 +60,8 @@ const App = {
       plans: () => this.showPlans(),
       myformulas: () => this.showMyFormulas(),
       bookmarks: () => this.showBookmarks(),
-      settings: () => this.showSettings()
+      settings: () => this.showSettings(),
+      resourceHealth: () => this.showResourceHealth()
     };
     (map[id] || map.home)();
     this.toggleSidebar(false);
@@ -186,6 +187,99 @@ const App = {
   showPlans() {
     this.showView('plans');
     Plans.render(K.el('view-plans'));
+  },
+
+  showResourceHealth() {
+    this.showView('resource-health');
+    const view = K.el('view-resource-health');
+    if (!view) return;
+    const esc = s => String(s ?? '').replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+    const videos = Object.entries(window.BEST_VIDEOS || {}).flatMap(([subject, chapters]) =>
+      Object.entries(chapters || {}).map(([chapterId, v]) => ({
+        url: `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${v.videoId}&format=json`,
+        openUrl: `https://www.youtube.com/watch?v=${v.videoId}`,
+        name: v.title,
+        type: 'video',
+        subject,
+        chapterId
+      }))
+    );
+    const resources = Object.entries(window.BEST_RESOURCES || {}).flatMap(([subject, chapters]) =>
+      Object.entries(chapters || {}).flatMap(([chapterId, arr]) => (arr || []).map(r => ({
+        url: r.url,
+        openUrl: r.url,
+        name: r.name,
+        type: r.type || 'web',
+        subject,
+        chapterId
+      })))
+    );
+    const all = [...videos, ...resources];
+    view.innerHTML = `
+      <div class="view-pad">
+        <button class="btn-back" id="healthBack">← Settings</button>
+        <h1>🩺 Resource health</h1>
+        <p class="muted">Checks YouTube oEmbed normally. Web resources are checked with browser fetch; some sites block CORS, so “Open directly” is still the source of truth.</p>
+        <div class="health-summary">
+          <span class="chip chip-blue">Total: ${all.length}</span>
+          <span class="chip chip-green" id="healthOk">OK: 0</span>
+          <span class="chip chip-red" id="healthBad">Broken: 0</span>
+          <span class="chip" id="healthPending">Pending: ${all.length}</span>
+        </div>
+        <div class="toolbar-row">
+          <button class="btn btn-primary" id="runHealth">Run check</button>
+          <button class="btn" id="openCheckerDoc">CLI: node tools/check-urls.js</button>
+        </div>
+        <div class="health-table-wrap glass-card">
+          <table class="health-table">
+            <thead><tr><th>Status</th><th>Name</th><th>Type</th><th>URL</th><th>Action</th></tr></thead>
+            <tbody>${all.map((item, i) => `
+              <tr data-i="${i}">
+                <td><span class="health-dot" id="hStatus${i}">Pending</span></td>
+                <td>${esc(item.name)}<br><small class="muted">${esc(item.subject)} / ${esc(item.chapterId)}</small></td>
+                <td>${esc(item.type)}</td>
+                <td class="health-url">${esc(item.openUrl)}</td>
+                <td><a class="btn btn-sm" href="${esc(item.openUrl)}" target="_blank" rel="noopener">Open ↗</a></td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>`;
+    K.el('healthBack').onclick = () => this.showSettings();
+    K.el('openCheckerDoc').onclick = () => K.toast('Run in repo: node tools/check-urls.js', 4500);
+    const setStatus = (i, label, cls) => {
+      const node = K.el('hStatus' + i);
+      if (!node) return;
+      node.className = 'health-dot ' + cls;
+      node.textContent = label;
+      const ok = document.querySelectorAll('.health-dot.ok').length;
+      const bad = document.querySelectorAll('.health-dot.bad').length;
+      const pending = all.length - ok - bad - document.querySelectorAll('.health-dot.warn').length;
+      K.el('healthOk').textContent = 'OK: ' + ok;
+      K.el('healthBad').textContent = 'Broken: ' + bad;
+      K.el('healthPending').textContent = 'Pending: ' + Math.max(0, pending);
+    };
+    const check = (item, i) => {
+      setStatus(i, 'Checking…', '');
+      const isVideo = item.type === 'video';
+      const url = item.url;
+      const timer = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 7000));
+      const req = isVideo
+        ? fetch(url).then(r => { if (!r.ok) throw new Error(String(r.status)); return r; })
+        : fetch(item.openUrl, { method: 'HEAD', mode: 'no-cors', cache: 'no-store' });
+      return Promise.race([req, timer])
+        .then(() => setStatus(i, isVideo ? 'OK' : 'Reachable', 'ok'))
+        .catch(() => {
+          if (isVideo) setStatus(i, 'Broken', 'bad');
+          else setStatus(i, 'Open directly', 'warn');
+        });
+    };
+    K.el('runHealth').onclick = async () => {
+      for (let i = 0; i < all.length; i += 6) {
+        await Promise.all(all.slice(i, i + 6).map((item, offset) => check(item, i + offset)));
+      }
+      K.toast('Resource health check complete');
+    };
   },
 
   toggleSidebar(force) {
@@ -761,6 +855,7 @@ const App = {
             <button class="btn" id="exportBm">🔖 Export bookmarks only</button>
             <button class="btn" id="importDataBtn">📥 Import</button>
             <input type="file" id="importData" accept="application/json" class="hidden"/>
+            <button class="btn" id="checkResources">🩺 Check Resources</button>
             <button class="btn" id="showSc">⌨️ Keyboard shortcuts</button>
             <button class="btn btn-danger" id="resetAll">🗑️ Reset All Progress</button>
           </div>
@@ -780,6 +875,7 @@ const App = {
         this.applyTheme(); this.applyFont(); this.applyAccent(); this.goHome();
       });
     };
+    K.el('checkResources').onclick = () => this.showResourceHealth();
     K.el('showSc').onclick = () => Shortcuts.showHelp();
     K.el('resetAll').onclick = () => {
       if (confirm('Reset all progress?')) {
