@@ -628,3 +628,4 @@ const MATHS_DATA = {
     ]
   }
 };
+window.MATHS_DATA = MATHS_DATA;

@@ -34,43 +34,39 @@ const PYQs = {
   _getBank(subject, chapterId) {
     const out = [];
     const push = arr => { if (Array.isArray(arr)) out.push(...arr); };
-    // Base chapter questions
-    const dataMaps = {
-      physics: window.PHYSICS_DATA || window.PHYSICS || window.physicsData,
-      chemistry: window.CHEMISTRY_DATA || window.CHEMISTRY || window.chemistryData,
-      maths: window.MATHS_DATA || window.MATHS || window.mathsData
-    };
-    // Try global chapter data patterns used in repo
-    try {
-      const raw = {
-        physics: typeof PHYSICS !== 'undefined' ? PHYSICS : null,
-        chemistry: typeof CHEMISTRY !== 'undefined' ? CHEMISTRY : null,
-        maths: typeof MATHS !== 'undefined' ? MATHS : null
-      }[subject];
-      if (raw && raw[chapterId]?.questions) push(raw[chapterId].questions);
-    } catch (e) {}
-    // PYQ banks
-    const banks = [
-      window.PYQ_PHYSICS, window.PYQ_PHYSICS_FULL, window.PYQ_CHEMISTRY, window.PYQ_MATHS,
-      window.PYQ_PHYS, window.CURATED_BANK
-    ];
-    banks.forEach(b => {
+    // Base chapter question banks (physics.js / chemistry.js / maths.js)
+    const base = {
+      physics: typeof PHYSICS_DATA !== 'undefined' ? PHYSICS_DATA : window.PHYSICS_DATA,
+      chemistry: typeof CHEMISTRY_DATA !== 'undefined' ? CHEMISTRY_DATA : window.CHEMISTRY_DATA,
+      maths: typeof MATHS_DATA !== 'undefined' ? MATHS_DATA : window.MATHS_DATA
+    }[subject];
+    if (base?.[chapterId]) {
+      const ch = base[chapterId];
+      push(ch.questions);
+      // also flatten nested difficulty buckets if present
+      ['basic', 'medium', 'advanced', 'mcq', 'numerical'].forEach(k => push(ch[k]));
+    }
+    // Dedicated PYQ files
+    const pyqGlobals = [];
+    try { if (typeof PYQ_PHYSICS !== 'undefined') pyqGlobals.push(PYQ_PHYSICS); } catch (e) {}
+    try { if (typeof PYQ_PHYSICS_FULL !== 'undefined') pyqGlobals.push(PYQ_PHYSICS_FULL); } catch (e) {}
+    try { if (typeof PYQ_CHEMISTRY !== 'undefined') pyqGlobals.push(PYQ_CHEMISTRY); } catch (e) {}
+    try { if (typeof PYQ_MATHS !== 'undefined') pyqGlobals.push(PYQ_MATHS); } catch (e) {}
+    pyqGlobals.forEach(b => {
       if (!b) return;
       if (b[chapterId]) push(Array.isArray(b[chapterId]) ? b[chapterId] : b[chapterId].questions);
-      if (b[subject]?.[chapterId]) {
-        const x = b[subject][chapterId];
-        push(Array.isArray(x) ? x : x.questions);
-      }
     });
-    // curated
-    if (window.CURATED_BANK) {
-      const c = window.CURATED_BANK;
-      if (Array.isArray(c)) push(c.filter(q => q.chapter === chapterId || q.ch === chapterId));
-      else if (c[chapterId]) push(Array.isArray(c[chapterId]) ? c[chapterId] : []);
-    }
-    // dedupe by id/q
+    // Curated bank: { physics: { p3: [...] }, ... }
+    try {
+      const c = typeof CURATED_BANK !== 'undefined' ? CURATED_BANK : window.CURATED_BANK;
+      if (c) {
+        if (c[subject]?.[chapterId]) push(c[subject][chapterId]);
+        if (c[chapterId]) push(Array.isArray(c[chapterId]) ? c[chapterId] : []);
+      }
+    } catch (e) {}
     const seen = new Set();
     return out.filter(q => {
+      if (!q || typeof q !== 'object') return false;
       const k = q.id || q.q;
       if (!k || seen.has(k)) return false;
       seen.add(k);
