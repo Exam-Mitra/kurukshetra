@@ -1,7 +1,7 @@
 {
   "name": "Kurukshetra — JEE 2028 Study Hub",
   "short_name": "Kurukshetra",
-  "description": "Pure study hub for JEE 2028 preparation",
+  "description": "Pure study hub for JEE 2028 preparation. Notes, mind maps, cheat sheets, summaries, PYQs, videos, topper notes & resources for all 40 chapters of Class 11 Physics, Chemistry & Maths.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -9,18 +9,55 @@
   "background_color": "#0a0a1a",
   "theme_color": "#6366f1",
   "categories": ["education", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
   "icons": [
     {
-      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='42' fill='%236366f1'/><text x='96' y='128' text-anchor='middle' font-family='Arial' font-size='100' font-weight='700' fill='white'>K</text></svg>",
+      "src": "assets/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='112' fill='%236366f1'/><text x='256' y='340' text-anchor='middle' font-family='Arial' font-size='280' font-weight='700' fill='white'>K</text></svg>",
+      "src": "assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Bookmarks",
+      "short_name": "Bookmarks",
+      "description": "View your bookmarked chapters",
+      "url": "./index.html#bookmarks",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Formula Library",
+      "short_name": "Formulas",
+      "description": "Browse all 325 formulas",
+      "url": "./index.html#formulas",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Today's Revision",
+      "short_name": "Today",
+      "description": "Spaced repetition review queue",
+      "url": "./index.html#review",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

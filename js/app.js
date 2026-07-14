@@ -46,6 +46,15 @@ const App = {
     this._buildSidebar();
     this._maybeBackupReminder();
     this.render();
+
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW registered:', reg.scope))
+          .catch(err => console.warn('SW registration failed:', err));
+      });
+    }
   },
 
   navigate(id) {
