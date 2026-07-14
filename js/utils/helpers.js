@@ -1,5 +1,5 @@
 /* ============================================
-   KURUKSHETRA V3 — Utility Helpers
+   KURUKSHETRA V3.1 — Utility Helpers
    ============================================ */
 
 const K = {
@@ -8,7 +8,21 @@ const K = {
     return d.toISOString().split('T')[0];
   },
   formatDate(d) {
+    if (!d) return '';
     return new Date(d).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+  },
+  daysBetween(a, b) {
+    const da = new Date(a), db = new Date(b);
+    return Math.floor((db - da) / 86400000);
+  },
+  relativeDays(dateStr) {
+    if (!dateStr) return 'Never';
+    const day = String(dateStr).slice(0, 10);
+    const n = this.daysBetween(day, this.todayKey());
+    if (n === 0) return 'Today';
+    if (n === 1) return 'Yesterday';
+    if (n < 0) return 'Today';
+    return `${n} days ago`;
   },
   el(id) { return document.getElementById(id); },
   qsa(sel) { return document.querySelectorAll(sel); },
@@ -57,9 +71,31 @@ const K = {
     if (el) el.classList.remove('hidden');
     window.scrollTo(0, 0);
     if (window.appState) window.appState.currentView = viewId;
+    document.body.dataset.view = viewId;
   },
   subjEmoji(s) { return s === 'physics' ? '⚛️' : s === 'chemistry' ? '🧪' : '📐'; },
-  subjName(s) { return s === 'physics' ? 'Physics' : s === 'chemistry' ? 'Chemistry' : 'Maths'; }
+  subjName(s) { return s === 'physics' ? 'Physics' : s === 'chemistry' ? 'Chemistry' : 'Maths'; },
+  fmtDuration(sec) {
+    sec = Math.max(0, Math.floor(sec || 0));
+    const h = Math.floor(sec / 3600);
+    const m = Math.floor((sec % 3600) / 60);
+    if (h) return `${h}h ${m}m`;
+    if (m) return `${m}m`;
+    return `${sec}s`;
+  },
+  addDays(dateStr, n) {
+    const d = new Date(dateStr + 'T12:00:00');
+    d.setDate(d.getDate() + n);
+    return d.toISOString().split('T')[0];
+  },
+  debounce(fn, ms = 250) {
+    let t;
+    return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+  },
+  skeleton(rows = 4) {
+    return `<div class="skeleton-wrap">${Array.from({ length: rows }, () =>
+      '<div class="skeleton-line"></div>').join('')}</div>`;
+  }
 };
 
 window.K = K;

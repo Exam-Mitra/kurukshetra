@@ -10,7 +10,21 @@ const MindMap = {
     }
     const central = content.central || content.name || chapterId;
     const nodes = Array.isArray(content.mindmap) ? content.mindmap : (content.mindmap.nodes || []);
-    el.innerHTML = `<div class="mindmap-container">${this._buildSVG(central, nodes)}</div>`;
+    el.innerHTML = `<div class="mindmap-container" id="mmPan">${this._buildSVG(central, nodes)}</div>
+      <p class="muted" style="margin-top:8px">Pinch / scroll to zoom · drag to pan on touch</p>`;
+    // basic touch pan already via overflow; add wheel zoom
+    const box = el.querySelector('.mindmap-container');
+    const svg = box?.querySelector('svg');
+    if (box && svg) {
+      let scale = 1;
+      box.addEventListener('wheel', e => {
+        if (!e.ctrlKey && !e.metaKey) return;
+        e.preventDefault();
+        scale = Math.min(2.5, Math.max(0.6, scale + (e.deltaY > 0 ? -0.08 : 0.08)));
+        svg.style.transformOrigin = 'center center';
+        svg.style.transform = `scale(${scale})`;
+      }, { passive: false });
+    }
   },
   _buildSVG(central, nodes) {
     const W = 1000, H = 640, cx = W / 2, cy = H / 2;

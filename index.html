@@ -13,28 +13,84 @@
   <link rel="stylesheet" href="css/study.css">
 </head>
 <body class="theme-dark">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <strong>Chapters</strong>
+      <button class="icon-btn" id="sidebarClose" title="Close">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <button data-nav="home">🏠 Home</button>
+      <button data-nav="formulas">📐 Formulas</button>
+      <button data-nav="myformulas">⭐ My Formulas</button>
+      <button data-nav="textbooks">📘 Textbooks</button>
+      <button data-nav="papers">📄 JEE Papers</button>
+      <button data-nav="rapid">⚡ Rapid Fire</button>
+      <button data-nav="mistakes">❌ Mistakes</button>
+      <button data-nav="analytics">📊 Analytics</button>
+      <button data-nav="plans">🗓️ Plans</button>
+      <button data-nav="bookmarks">🔖 Bookmarks</button>
+      <button data-nav="settings">⚙️ Settings</button>
+    </nav>
+    <div class="sidebar-tree" id="sidebarTree"></div>
+  </aside>
+  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="App.toggleSidebar(false)"></div>
+
   <header class="study-header">
+    <button class="icon-btn" id="menuBtn" title="Menu">☰</button>
     <div class="brand" id="logoBtn"><div class="brand-mark">K</div><div class="brand-name">Kurukshetra</div></div>
     <div class="search-wrap">
       <span class="search-icon-btn">🔍</span>
-      <input type="text" id="globalSearch" placeholder="Search chapters, formulas, videos..." autocomplete="off">
+      <input type="text" id="globalSearch" placeholder="Search chapters, formulas (e.g. u²sin2θ/g)..." autocomplete="off">
       <div id="searchResults" class="hidden"></div>
     </div>
+    <div class="font-nudge">
+      <button class="icon-btn" id="fontDown" title="Smaller">A−</button>
+      <button class="icon-btn" id="fontReset" title="Reset">A</button>
+      <button class="icon-btn" id="fontUp" title="Larger">A+</button>
+    </div>
     <div class="header-actions">
-      <button class="icon-btn" id="homeBtn" title="Home">🏠</button>
-      <button class="icon-btn" id="bookmarksBtn" title="Bookmarks">🔖</button>
+      <button class="icon-btn" id="homeBtn" title="Home (g h)">🏠</button>
+      <button class="icon-btn" id="bookmarksBtn" title="Bookmarks (g b)">🔖</button>
       <button class="icon-btn" id="themeToggle" title="Theme">🌓</button>
-      <button class="icon-btn" id="settingsBtn" title="Settings">⚙️</button>
+      <button class="icon-btn" id="settingsBtn" title="Settings (g s)">⚙️</button>
     </div>
   </header>
 
-  <main>
-    <section id="view-home" class="view"><div id="homeHero" class="home-hero"></div><div id="subjectsGrid" class="subjects-grid"></div><div id="recentChapters"></div></section>
-    <section id="view-subject" class="view hidden"></section>
-    <section id="view-chapter" class="view hidden"></section>
-    <section id="view-bookmarks" class="view hidden"></section>
-    <section id="view-settings" class="view hidden"></section>
-  </main>
+  <div class="app-shell">
+    <main>
+      <section id="view-home" class="view">
+        <div id="homeHero" class="home-hero"></div>
+        <div id="resumeCard"></div>
+        <div id="fotdCard"></div>
+        <div id="formulaCounts"></div>
+        <div id="srsCard"></div>
+        <div id="recommendCard"></div>
+        <div id="weekStrip"></div>
+        <div id="subjectsGrid" class="subjects-grid"></div>
+        <div id="recentChapters"></div>
+      </section>
+      <section id="view-subject" class="view hidden"></section>
+      <section id="view-chapter" class="view hidden"></section>
+      <section id="view-bookmarks" class="view hidden"></section>
+      <section id="view-settings" class="view hidden"></section>
+      <section id="view-formulas" class="view hidden"></section>
+      <section id="view-my-formulas" class="view hidden"></section>
+      <section id="view-textbooks" class="view hidden"></section>
+      <section id="view-papers" class="view hidden"></section>
+      <section id="view-mistakes" class="view hidden"></section>
+      <section id="view-rapid" class="view hidden"></section>
+      <section id="view-analytics" class="view hidden"></section>
+      <section id="view-plans" class="view hidden"></section>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <button data-nav="home">🏠<span>Home</span></button>
+    <button data-nav="formulas">📐<span>Formulas</span></button>
+    <button data-nav="rapid">⚡<span>Rapid</span></button>
+    <button data-nav="mistakes">❌<span>Mistakes</span></button>
+    <button data-nav="analytics">📊<span>Stats</span></button>
+  </nav>
 
   <div id="toast" class="hidden"></div>
 
@@ -54,8 +110,16 @@
   <script src="js/data/study-content.js"></script>
   <script src="js/data/best-videos.js"></script>
   <script src="js/data/best-resources.js"></script>
+  <script src="js/data/formula-library.js"></script>
+  <script src="js/data/related-chapters.js"></script>
+  <script src="js/data/ncert-pages.js"></script>
+  <script src="js/data/jee-papers.js"></script>
+  <script src="js/data/study-plans.js"></script>
+  <script src="js/data/textbooks.js"></script>
   <script src="js/utils/helpers.js"></script>
   <script src="js/storage/save.js"></script>
+  <script src="js/services/tracker.js"></script>
+  <script src="js/services/srs.js"></script>
   <script src="js/ui/file-viewer.js"></script>
   <script src="js/ui/video-player.js"></script>
   <script src="js/ui/notes.js"></script>
@@ -65,8 +129,17 @@
   <script src="js/ui/topper-notes.js"></script>
   <script src="js/ui/resources.js"></script>
   <script src="js/ui/pyqs.js"></script>
+  <script src="js/ui/ncert-solutions.js"></script>
   <script src="js/ui/bookmarks.js"></script>
   <script src="js/ui/search.js"></script>
+  <script src="js/ui/formula-library.js"></script>
+  <script src="js/ui/textbooks.js"></script>
+  <script src="js/ui/papers.js"></script>
+  <script src="js/ui/mistakes.js"></script>
+  <script src="js/ui/rapid-fire.js"></script>
+  <script src="js/ui/analytics.js"></script>
+  <script src="js/ui/plans.js"></script>
+  <script src="js/ui/shortcuts.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

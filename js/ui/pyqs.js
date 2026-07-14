@@ -1,4 +1,4 @@
-/* KURUKSHETRA V3 — Self-contained PYQ player */
+/* KURUKSHETRA V3.1 — PYQ player + important + bookmarks + SRS + mistakes */
 const PYQs = {
   render(subject, chapterId, container) {
     const el = container || K.el('tabContent');
@@ -25,16 +25,18 @@ const PYQs = {
         <button class="mode-card" data-mode="medium">🔥<span>Medium</span></button>
         <button class="mode-card" data-mode="advanced">💀<span>Advanced</span></button>
         <button class="mode-card" data-mode="dpp">⏱️<span>DPP</span></button>
+        <button class="mode-card" data-mode="important">📌<span>Must-Do</span></button>
+        <button class="mode-card" data-mode="srs">🧠<span>SRS Due</span></button>
       </div>
       <div id="pyqPlayArea"><p class="muted" style="text-align:center;padding:32px">Choose a mode to start practicing.</p></div>`;
     el.querySelectorAll('.mode-card').forEach(btn => {
       btn.onclick = () => this.start(btn.dataset.mode);
     });
   },
+
   _getBank(subject, chapterId) {
     const out = [];
     const push = arr => { if (Array.isArray(arr)) out.push(...arr); };
-    // Base chapter question banks (physics.js / chemistry.js / maths.js)
     const base = {
       physics: typeof PHYSICS_DATA !== 'undefined' ? PHYSICS_DATA : window.PHYSICS_DATA,
       chemistry: typeof CHEMISTRY_DATA !== 'undefined' ? CHEMISTRY_DATA : window.CHEMISTRY_DATA,
@@ -43,10 +45,8 @@ const PYQs = {
     if (base?.[chapterId]) {
       const ch = base[chapterId];
       push(ch.questions);
-      // also flatten nested difficulty buckets if present
       ['basic', 'medium', 'advanced', 'mcq', 'numerical'].forEach(k => push(ch[k]));
     }
-    // Dedicated PYQ files
     const pyqGlobals = [];
     try { if (typeof PYQ_PHYSICS !== 'undefined') pyqGlobals.push(PYQ_PHYSICS); } catch (e) {}
     try { if (typeof PYQ_PHYSICS_FULL !== 'undefined') pyqGlobals.push(PYQ_PHYSICS_FULL); } catch (e) {}
@@ -56,7 +56,6 @@ const PYQs = {
       if (!b) return;
       if (b[chapterId]) push(Array.isArray(b[chapterId]) ? b[chapterId] : b[chapterId].questions);
     });
-    // Curated bank: { physics: { p3: [...] }, ... }
     try {
       const c = typeof CURATED_BANK !== 'undefined' ? CURATED_BANK : window.CURATED_BANK;
       if (c) {
@@ -73,13 +72,55 @@ const PYQs = {
       return true;
     });
   },
+
+  important(subject, chapterId) {
+    // Curated "must-do": prefer medium/advanced, take 12 unique
+    let bank = this._getBank(subject, chapterId);
+    const pref = bank.filter(q => ['medium', 'advanced'].includes(q.diff || q.difficulty));
+    const pool = pref.length >= 8 ? pref : bank;
+    return K.shuffle(pool).slice(0, 12);
+  },
+
+  isQBookmarked(qid) {
+    return (window.appState?.questionBookmarks || []).includes(qid);
+  },
+
+  toggleQBookmark(q, subject, chapterId) {
+    const st = window.appState;
+    if (!st || !q) return;
+    const id = q.id || (subject + '_' + chapterId + '_' + String(q.q || '').slice(0, 24));
+    st.questionBookmarks = st.questionBookmarks || [];
+    const i = st.questionBookmarks.indexOf(id);
+    if (i >= 0) st.questionBookmarks.splice(i, 1);
+    else {
+      st.questionBookmarks.push(id);
+      st.bookmarks = st.bookmarks || [];
+      if (!st.bookmarks.find(b => b.id === id)) {
+        st.bookmarks.push({
+          type: 'question', id, title: String(q.q || q.question || id).slice(0, 80),
+          subject, chapterId, savedAt: K.todayKey(), q
+        });
+      }
+    }
+    Storage.save(st);
+    K.toast(i >= 0 ? 'Question unbookmarked' : '📌 Question saved to Must-Revise');
+  },
+
   start(mode) {
     let bank = this._getBank(this.subject, this.chapterId);
     if (mode === 'basic' || mode === 'medium' || mode === 'advanced') {
       bank = bank.filter(q => (q.diff || q.difficulty || 'medium') === mode || (q.diff || '') === mode[0]);
+    } else if (mode === 'important') {
+      bank = this.important(this.subject, this.chapterId);
+    } else if (mode === 'srs') {
+      const due = SRS.dueToday(window.appState).filter(h =>
+        h.chapterId === this.chapterId || h.subject === this.subject
+      );
+      const map = new Map(bank.map(q => [q.id, q]));
+      bank = due.map(d => map.get(d.id)).filter(Boolean);
+      if (!bank.length) bank = this._getBank(this.subject, this.chapterId).slice(0, 5);
     }
     if (!bank.length) {
-      // fallback sample
       bank = [{
         id: 'sample1', diff: 'basic', type: 'mcq',
         q: 'Sample: SI unit of force is?',
@@ -88,9 +129,10 @@ const PYQs = {
       }];
     }
     bank = K.shuffle(bank).slice(0, mode === 'dpp' ? 10 : Math.min(15, bank.length));
-    this.session = { mode, qs: bank, i: 0, correct: 0, wrong: 0, done: false };
+    this.session = { mode, qs: bank, i: 0, correct: 0, wrong: 0, t0: Date.now() };
     this._showQ();
   },
+
   _showQ() {
     const area = K.el('pyqPlayArea');
     const s = this.session;
@@ -99,12 +141,15 @@ const PYQs = {
     const q = s.qs[s.i];
     const opts = q.options || q.opts || [];
     const letters = ['A', 'B', 'C', 'D', 'E'];
+    const qid = q.id || (this.chapterId + '_' + s.i);
+    const bm = this.isQBookmarked(qid);
     area.innerHTML = `
       <div class="q-card">
         <div class="q-top">
           <span class="q-badge">${s.i + 1} / ${s.qs.length}</span>
           <span class="q-badge">${q.diff || q.difficulty || 'mixed'}</span>
           <span class="q-badge">${s.mode}</span>
+          <button class="star-btn ${bm ? 'on' : ''}" id="qBm" title="Bookmark question">${bm ? '★' : '☆'}</button>
         </div>
         <div class="q-text">${q.q || q.question}</div>
         <div class="q-options" id="qOptions">
@@ -115,6 +160,11 @@ const PYQs = {
           <button class="btn btn-primary hidden" id="qNext">Next →</button>
         </div>
       </div>`;
+    K.el('qBm').onclick = () => {
+      q.id = qid;
+      this.toggleQBookmark(q, this.subject, this.chapterId);
+      this._showQ();
+    };
     const ans = typeof q.answer === 'number' ? q.answer : (typeof q.ans === 'number' ? q.ans : 0);
     area.querySelectorAll('.q-option').forEach(btn => {
       btn.onclick = () => {
@@ -127,8 +177,18 @@ const PYQs = {
           if (i === pick && pick !== ans) b.classList.add('wrong');
         });
         const ok = pick === ans;
-        if (ok) s.correct++; else s.wrong++;
-        this._track(ok);
+        if (ok) s.correct++; else {
+          s.wrong++;
+          Mistakes.add({
+            subject: this.subject, chapterId: this.chapterId,
+            q: q.q || q.question, options: opts,
+            picked: pick, pickedLabel: opts[pick],
+            answer: ans, correctLabel: opts[ans],
+            solution: q.solution || q.sol || '',
+            id: qid
+          });
+        }
+        this._track(ok, qid, q);
         const sol = K.el('qSolution');
         sol.classList.remove('hidden');
         sol.innerHTML = `<div class="solution-box"><b>${ok ? '✅ Correct' : '❌ Wrong'}</b>
@@ -140,20 +200,32 @@ const PYQs = {
       };
     });
   },
-  _track(ok) {
+
+  _track(ok, qid, q) {
     const st = window.appState;
     if (!st) return;
     st.progress[this.subject] = st.progress[this.subject] || {};
     const p = st.progress[this.subject][this.chapterId] = st.progress[this.subject][this.chapterId] || {};
     p.pyqsAttempted = (p.pyqsAttempted || 0) + 1;
     if (ok) p.pyqsCorrect = (p.pyqsCorrect || 0) + 1;
+    SRS.review(st, qid, ok, { subject: this.subject, chapterId: this.chapterId });
+    Tracker.recordAnswerTimeOfDay(st, ok);
     Storage.save(st);
   },
+
   _finish() {
     const s = this.session;
     const area = K.el('pyqPlayArea');
     const total = s.correct + s.wrong;
     const acc = total ? Math.round(s.correct / total * 100) : 0;
+    const mins = Math.max(0.1, (Date.now() - s.t0) / 60000);
+    const v = (total / mins).toFixed(1);
+    const st = window.appState;
+    const p = st.progress?.[this.subject]?.[this.chapterId];
+    if (p) {
+      p.lastVelocity = +v;
+      Storage.save(st);
+    }
     area.innerHTML = `<div class="q-finish">
       <h2>🏁 Session Complete</h2>
       <div class="pyq-stats">
@@ -161,6 +233,7 @@ const PYQs = {
         <span class="chip chip-red">❌ ${s.wrong}</span>
         <span class="chip chip-blue">📊 ${total}</span>
         <span class="chip chip-purple">🎯 ${acc}%</span>
+        <span class="chip">⚡ ${v} Q/min</span>
       </div>
       <button class="btn btn-primary" id="pyqRestart">Practice again</button>
     </div>`;
