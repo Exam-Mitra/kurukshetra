@@ -69,9 +69,52 @@ const Questions = {
   },
 
   _getChapterData(subject, chapterId) {
-    if (subject === 'physics') return PHYSICS_DATA[chapterId];
-    if (subject === 'chemistry') return CHEMISTRY_DATA[chapterId];
-    if (subject === 'maths') return MATHS_DATA[chapterId];
+    if (subject === 'physics') {
+      const base = PHYSICS_DATA[chapterId] || {};
+      // Merge from original PYQ_PHYSICS (p1/p2) + new full bank (p1-p8)
+      let merged = [...(base.questions || [])];
+
+      // Legacy PYQs (p1, p2)
+      if (window.PYQ_PHYSICS && PYQ_PHYSICS[chapterId]) {
+        merged = merged.concat(PYQ_PHYSICS[chapterId]);
+      }
+
+      // Full PYQ bank (p1 to p8) - 160 real-style JEE questions
+      if (window.PYQ_PHYSICS_FULL && PYQ_PHYSICS_FULL[chapterId]) {
+        merged = merged.concat(PYQ_PHYSICS_FULL[chapterId]);
+      }
+
+      return {
+        ...base,
+        questions: merged
+      };
+    }
+    if (subject === 'chemistry') {
+      const base = CHEMISTRY_DATA[chapterId] || {};
+      const pyqMap = { c1: 'c1', c2: 'c2', c4: 'c4' };
+      const pyqKey = pyqMap[chapterId];
+      if (pyqKey && window.PYQ_CHEMISTRY && PYQ_CHEMISTRY[pyqKey]) {
+        const pyqs = PYQ_CHEMISTRY[pyqKey] || [];
+        return {
+          ...base,
+          questions: [...(base.questions || []), ...pyqs]
+        };
+      }
+      return base;
+    }
+    if (subject === 'maths') {
+      const base = MATHS_DATA[chapterId] || {};
+      const pyqMap = { m1: 'm1', m3: 'm3', m5: 'm5' };
+      const pyqKey = pyqMap[chapterId];
+      if (pyqKey && window.PYQ_MATHS && PYQ_MATHS[pyqKey]) {
+        const pyqs = PYQ_MATHS[pyqKey] || [];
+        return {
+          ...base,
+          questions: [...(base.questions || []), ...pyqs]
+        };
+      }
+      return base;
+    }
     return null;
   },
 
